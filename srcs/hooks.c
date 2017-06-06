@@ -6,7 +6,7 @@
 /*   By: nghaddar <nghaddar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/19 15:24:42 by nghaddar          #+#    #+#             */
-/*   Updated: 2017/06/02 17:51:10 by nghaddar         ###   ########.fr       */
+/*   Updated: 2017/06/06 16:21:45 by nghaddar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ int		ft_mouse_mv_hook(int x, int y, t_env *env)
 
 int		ft_mouse_click_hook(int button, int x, int y, t_env *env)
 {
+	x = 0;
+	y = 0;
 	if ((button == WHEEL_UP || button == WHEEL_DOWN))
 		ft_zoom(env, button);
 	mlx_destroy_image(env->mlx, env->img);
