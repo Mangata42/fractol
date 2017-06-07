@@ -6,7 +6,7 @@
 /*   By: nghaddar <nghaddar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/02 17:04:45 by nghaddar          #+#    #+#             */
-/*   Updated: 2017/06/06 17:32:08 by nghaddar         ###   ########.fr       */
+/*   Updated: 2017/06/07 15:13:48 by nghaddar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,10 @@
 
 void	ft_jul_pixel(t_env *env, t_frac frac, int i)
 {
-	ft_put_pixel(env, frac.x, frac.y, (0x0000e0) * (i + 1));
+	int 	color = i / 10;
+	int		pal[] = {0x581845, 0x900C3F, 0xC70039, 0xFF5733, 0xFFC300, 0xffffff};
+
+	ft_put_pixel(env, frac.x, frac.y, pal[color]);
 }
 
 void	ft_draw_jul(t_env *env, t_frac frac)

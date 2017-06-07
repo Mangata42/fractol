@@ -6,7 +6,7 @@
 /*   By: nghaddar <nghaddar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/10 16:43:44 by nghaddar          #+#    #+#             */
-/*   Updated: 2017/06/06 17:31:12 by nghaddar         ###   ########.fr       */
+/*   Updated: 2017/06/07 16:58:52 by nghaddar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,7 @@ struct			s_env
 	int		end;
 	int		frac_num;
 	int		pause;
+	int		pal[5][5];
 	double		mos_x;
 	double		mos_y;
 	t_frac	frac;

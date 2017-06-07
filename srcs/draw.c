@@ -6,7 +6,7 @@
 /*   By: nghaddar <nghaddar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/19 15:13:12 by nghaddar          #+#    #+#             */
-/*   Updated: 2017/06/02 17:36:32 by nghaddar         ###   ########.fr       */
+/*   Updated: 2017/06/07 10:49:30 by nghaddar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ void	ft_colorwave(t_env *env)
 	env->img = mlx_new_image(env->mlx, IMG_SIZE, IMG_SIZE);
 	ft_choose_frac(env);
 }
+
 void	ft_iteration(t_env *env, int keycode)
 {
 	if (keycode == K_UP)
