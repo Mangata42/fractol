@@ -6,7 +6,7 @@
 /*   By: nghaddar <nghaddar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/06 17:43:52 by nghaddar          #+#    #+#             */
-/*   Updated: 2017/06/06 18:01:14 by nghaddar         ###   ########.fr       */
+/*   Updated: 2017/06/14 23:17:30 by nghaddar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,14 +33,14 @@ void	ft_draw_burning(t_env *env, t_frac frac)
 			frac.zr = frac.x / frac.zoom_x +frac.x1;
 			frac.zi = frac.y / frac.zoom_y +frac.y1;
 			i = -1;
-			while ((frac.zr * frac.zr + frac.zi * frac.zi) < 4
+			while (pow((fabs(frac.zr) + fabs(frac.zr)), 2) + (frac.cr + frac.ci) < 2
 				&& ++i < frac.i_max)
 			{
 				tmp_zr = frac.zr;
 				frac.zr = frac.zr * frac.zr - frac.zi * frac.zi + frac.cr;
 				frac.zi = 2 * frac.zi * tmp_zr + frac.ci;
 			}
-			ft_mandel_pixel(env, frac, i);
+			ft_burning_pixel(env, frac, i);
 		}
 		frac.y = -1;
 	}

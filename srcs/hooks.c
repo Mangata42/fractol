@@ -6,7 +6,7 @@
 /*   By: nghaddar <nghaddar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/19 15:24:42 by nghaddar          #+#    #+#             */
-/*   Updated: 2017/06/06 16:21:45 by nghaddar         ###   ########.fr       */
+/*   Updated: 2017/06/14 22:21:01 by nghaddar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,12 @@ int		ft_expose_hook(t_env *env)
 {
 	mlx_clear_window(env->mlx, env->win);
 	mlx_put_image_to_window(env->mlx, env->win, env->img, 0, 0);
+	if (env->frac_num == 1)
+		mlx_string_put(env->mlx, env->win, 200, 10, 0x00FF00, "mandelbrot");
+	if (env->frac_num == 2)
+		mlx_string_put(env->mlx, env->win, 220, 10, 0x00FF00, "julia");
+	if (env->frac_num == 3)
+		mlx_string_put(env->mlx, env->win, 200, 10, 0x00ff00, "burningship");
 	return (0);
 }
 
@@ -52,6 +58,8 @@ int		ft_keyhook(int keycode, t_env *env)
 	if (keycode == K_SPA)
 		(env->pause) ? (env->pause = 0) : (env->pause = 1);
 	mlx_destroy_image(env->mlx, env->img);
+	if (keycode == K_RIGHT || keycode == K_LEFT)
+		ft_color_shades(env, keycode);
 	env->img = mlx_new_image(env->mlx, IMG_SIZE, IMG_SIZE);
 	ft_choose_frac(env);
 	return (0);

@@ -6,7 +6,7 @@
 /*   By: nghaddar <nghaddar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/10 16:43:44 by nghaddar          #+#    #+#             */
-/*   Updated: 2017/06/07 16:58:52 by nghaddar         ###   ########.fr       */
+/*   Updated: 2017/06/14 23:14:13 by nghaddar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ struct			s_env
 	int		frac_num;
 	int		pause;
 	int		pal[5][5];
+	int		col_no;
 	double		mos_x;
 	double		mos_y;
 	t_frac	frac;
@@ -74,6 +75,9 @@ void	ft_set_mand(t_env *env);
 void	ft_set_julia(t_env *env);
 void	ft_draw_mand(t_env *env, t_frac frac);
 void	ft_draw_jul(t_env *env, t_frac frac);
+void	ft_set_burning(t_env *env);
+void	ft_draw_burning(t_env *env, t_frac frac);
+void	ft_burning_pixel(t_env *env, t_frac frac, int i);
 void	ft_choose_frac(t_env *env);
 void	ft_put_pixel(t_env *env, int x, int y, int color);
 int		ft_expose_hook(t_env *env);
@@ -83,5 +87,6 @@ int		ft_mouse_mv_hook(int x, int y, t_env *env);
 void	ft_zoom(t_env *env, int button);
 void	ft_iteration(t_env *env, int keycode);
 void	ft_colorwave(t_env *env);
+void	ft_color_shades(t_env *env, int keycode);
 
 #endif

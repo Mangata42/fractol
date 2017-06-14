@@ -6,11 +6,23 @@
 /*   By: nghaddar <nghaddar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/19 15:13:12 by nghaddar          #+#    #+#             */
-/*   Updated: 2017/06/07 10:49:30 by nghaddar         ###   ########.fr       */
+/*   Updated: 2017/06/14 22:11:15 by nghaddar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
+
+void	ft_color_shades(t_env *env, int keycode)
+{
+	if (keycode == K_RIGHT)
+		env->col_no++;
+	if (keycode == K_LEFT)
+		env->col_no--;
+	if (env->col_no >= 5)
+		env->col_no = 0;
+	if (env->col_no < 0)
+		env->col_no = 4;
+}
 
 void	ft_colorwave(t_env *env)
 {

@@ -6,7 +6,7 @@
 #    By: nghaddar <nghaddar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/04 17:19:03 by nghaddar          #+#    #+#              #
-#    Updated: 2017/06/07 17:11:27 by nghaddar         ###   ########.fr        #
+#    Updated: 2017/06/14 23:14:24 by nghaddar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,10 +16,11 @@ SRCS = fractol.c \
 		draw.c \
 		mandelbrot.c \
 		julia.c \
+		burningship.c \
 		hooks.c
 SRCS_D = $(addprefix ./srcs/, $(SRCS))
 FLAGS = no
-COMPIL_LIBS = yes
+COMPIL_LIBS = no
 NAME = fractol
 LIBFT_DIR = ./libs/libft/
 MLX_DIR = ./libs/mlx

@@ -6,7 +6,7 @@
 /*   By: nghaddar <nghaddar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/19 12:14:12 by nghaddar          #+#    #+#             */
-/*   Updated: 2017/06/07 17:04:34 by nghaddar         ###   ########.fr       */
+/*   Updated: 2017/06/14 22:00:32 by nghaddar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 void	ft_mandel_pixel(t_env *env, t_frac frac, int i)
 {
-	// if (i < frac.i_max)
-	// 	ft_put_pixel(env, frac.x, frac.y, (0x0e0000) * (i + 1));
+	int 	shade;
+	int		color;
 
-	int 	color = i / 10;
-
-	if (color >= 0 && color <= 4)
-		ft_put_pixel(env, frac.x, frac.y, env->pal[1][color]);
+	shade = i / 10;
+	color = env->pal[env->col_no][shade];
+	if (shade >= 0 && shade <= 4)
+		ft_put_pixel(env, frac.x, frac.y, color);
 	else
-		ft_put_pixel(env, frac.x, frac.y, 0xFFFFFF);
+		ft_put_pixel(env, frac.x, frac.y, color - (i * 0x0a0a0a));
 	if (i == frac.i_max)
 		ft_put_pixel(env, frac.x, frac.y, 0x0);
 }
