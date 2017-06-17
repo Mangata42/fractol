@@ -6,7 +6,7 @@
 /*   By: nghaddar <nghaddar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/19 11:32:46 by nghaddar          #+#    #+#             */
-/*   Updated: 2017/06/14 17:49:17 by nghaddar         ###   ########.fr       */
+/*   Updated: 2017/06/17 17:38:01 by nghaddar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,9 @@ static void		set_pal(t_env *env)
 		{0x740074, 0xba00ba, 0xff00ff, 0xff5cff, 0xffd0ff}, sizeof(int) * 5);
 }
 
-t_env	*init_env(void)
+t_env			*init_env(void)
 {
 	t_env	*env;
-	int		pal[5][5];
 
 	if (!(env = (t_env *)malloc(sizeof(t_env))))
 		ft_errors(3);

@@ -6,7 +6,7 @@
 /*   By: nghaddar <nghaddar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/11 11:18:53 by nghaddar          #+#    #+#             */
-/*   Updated: 2017/06/14 23:15:23 by nghaddar         ###   ########.fr       */
+/*   Updated: 2017/06/17 14:29:14 by nghaddar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static void	ft_check_args(char *frac_name, t_env *env)
 	}
 	else if (ft_strcmp(frac_name, "burningship") == 0)
 	{
-		env->frac_num = 2;
+		env->frac_num = 3;
 		ft_set_burning(env);
 	}
 	else

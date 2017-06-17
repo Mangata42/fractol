@@ -6,7 +6,7 @@
 /*   By: nghaddar <nghaddar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/19 15:24:42 by nghaddar          #+#    #+#             */
-/*   Updated: 2017/06/14 22:21:01 by nghaddar         ###   ########.fr       */
+/*   Updated: 2017/06/17 16:53:19 by nghaddar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int		ft_keyhook(int keycode, t_env *env)
 	if (keycode == K_UP || keycode == K_DOWN)
 		ft_iteration(env, keycode);
 	if (keycode == K_SPA)
-		(env->pause) ? (env->pause = 0) : (env->pause = 1);
+		env->pause = !env->pause;
 	mlx_destroy_image(env->mlx, env->img);
 	if (keycode == K_RIGHT || keycode == K_LEFT)
 		ft_color_shades(env, keycode);

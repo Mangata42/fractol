@@ -6,7 +6,7 @@
 /*   By: nghaddar <nghaddar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/19 15:13:12 by nghaddar          #+#    #+#             */
-/*   Updated: 2017/06/14 22:11:15 by nghaddar         ###   ########.fr       */
+/*   Updated: 2017/06/17 16:51:47 by nghaddar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,8 +61,8 @@ void	ft_zoom(t_env *env, int button)
 
 void	ft_put_pixel(t_env *env, int x, int y, int color)
 {
-	int 	pos;
-	int8_t 	mask;
+	int		pos;
+	int8_t	mask;
 
 	if ((x >= 0 && x <= IMG_SIZE) && (y >= 0 && y <= IMG_SIZE))
 	{

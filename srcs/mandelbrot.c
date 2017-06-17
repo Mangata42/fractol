@@ -6,7 +6,7 @@
 /*   By: nghaddar <nghaddar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/19 12:14:12 by nghaddar          #+#    #+#             */
-/*   Updated: 2017/06/14 22:00:32 by nghaddar         ###   ########.fr       */
+/*   Updated: 2017/06/17 16:45:34 by nghaddar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_mandel_pixel(t_env *env, t_frac frac, int i)
 {
-	int 	shade;
+	int		shade;
 	int		color;
 
 	shade = i / 10;
@@ -37,10 +37,10 @@ void	ft_draw_mand(t_env *env, t_frac frac)
 		frac.y = -1;
 		while (++frac.y < IMG_SIZE)
 		{
-			frac.cr = frac.x / frac.zoom_x +frac.x1;
-			frac.ci = frac.y / frac.zoom_y +frac.y1;
-			frac.zr = frac.x / frac.zoom_x +frac.x1;
-			frac.zi = frac.y / frac.zoom_y +frac.y1;
+			frac.cr = frac.x / frac.zoom_x + frac.x1;
+			frac.ci = frac.y / frac.zoom_y + frac.y1;
+			frac.zr = frac.x / frac.zoom_x + frac.x1;
+			frac.zi = frac.y / frac.zoom_y + frac.y1;
 			i = -1;
 			while ((frac.zr * frac.zr + frac.zi * frac.zi) < 4
 				&& ++i < frac.i_max)

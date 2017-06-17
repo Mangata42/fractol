@@ -6,7 +6,7 @@
 #    By: nghaddar <nghaddar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/04 17:19:03 by nghaddar          #+#    #+#              #
-#    Updated: 2017/06/14 23:14:24 by nghaddar         ###   ########.fr        #
+#    Updated: 2017/06/17 17:36:35 by nghaddar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,8 +19,8 @@ SRCS = fractol.c \
 		burningship.c \
 		hooks.c
 SRCS_D = $(addprefix ./srcs/, $(SRCS))
-FLAGS = no
-COMPIL_LIBS = no
+FLAGS = yes
+COMPIL_LIBS = yes
 NAME = fractol
 LIBFT_DIR = ./libs/libft/
 MLX_DIR = ./libs/mlx
