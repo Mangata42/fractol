@@ -10,7 +10,7 @@ Fractol is a little program that displays three of the most famous abstract frac
 	<code>./fractol [fractal_type] </code>
 	Fractal types are : 
 		<ul>
-			</li> Mandelbrot </li>
+			<li> Mandelbrot </li>
 			<li> Julia </li>
 			<li> Burningship </li>
 		</ul>
